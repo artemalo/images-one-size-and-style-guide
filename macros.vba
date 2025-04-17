@@ -136,7 +136,8 @@ Sub Select_Image_scale_text()
                 rng.Text = stylesAndText(2) & " "
 
                 rng.Collapse Direction:=wdCollapseEnd
-                rng.Fields.Add Range:=rng, Type:=wdFieldEmpty, Text:="SEQ Figure \* ARABIC ", PreserveFormatting:=False
+                '------------------------------------------------ "Ðèñóíîê" == "Рисунок"
+                rng.Fields.Add Range:=rng, Type:=wdFieldEmpty, Text:="SEQ Ðèñóíîê \* ARABIC ", PreserveFormatting:=False
 
                 rng.Paragraphs(1).Range.Style = ActiveDocument.Styles(stylesAndText(1))
             End With
