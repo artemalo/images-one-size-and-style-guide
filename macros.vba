@@ -1,9 +1,15 @@
 Public height As Integer
 Public width As Integer
-
 Public stylePicture As String
 Public stylePictureText As String
 Public textUnderPicture As String
+Sub InitGlobalVars()
+    height = 300
+    width = 300
+    stylePicture = "Рисунок"
+    stylePictureText = "Рисунок текст"
+    textUnderPicture = "Рисунок"
+End Sub
 ' -----------------------------------------------------------------------------------------------------------------
 ' ---------Is exists style. Fast search----------------------------------------------------------------------------
 Function StyleExists(styleName As Variant) As Boolean
@@ -94,11 +100,7 @@ End Function
 ' -----------------------------------------------------------------------------------------------------------------
 ' -----Can-cange-name-Sub------------------------------------------------------------------------------------------
 Sub Select_Image_scale_text()
-    height           = 300 ' default init
-    width            = 300 ' default init
-    stylePicture     =       "Рисунок" ' default init
-    stylePictureText = "Рисунок текст" ' default init
-    textUnderPicture =       "Рисунок" ' default init
+    InitGlobalVars
     Dim i As Long
     Dim shp As InlineShape
     Dim rng As Range
@@ -136,8 +138,7 @@ Sub Select_Image_scale_text()
                 rng.Text = stylesAndText(2) & " "
 
                 rng.Collapse Direction:=wdCollapseEnd
-                '------------------------------------------------ "Ðèñóíîê" == "Рисунок"
-                rng.Fields.Add Range:=rng, Type:=wdFieldEmpty, Text:="SEQ Ðèñóíîê \* ARABIC ", PreserveFormatting:=False
+                rng.Fields.Add Range:=rng, Type:=wdFieldEmpty, Text:="SEQ Рисунок \* ARABIC ", PreserveFormatting:=False
 
                 rng.Paragraphs(1).Range.Style = ActiveDocument.Styles(stylesAndText(1))
             End With
