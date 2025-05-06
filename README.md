@@ -1,5 +1,6 @@
 # images-one-size-and-style-guide
 Со временем документация будет нормальная...</br></br>
+<h1>How to Make All Pictures of Same Size in Microsoft Word</h1>
 <h2>Macros in Microsoft Word</h2>
 <h1>Apply one style (style image, style text) and one text under the image to a set of images.</h1></br>
 Select images and apply one size, one style-image, one style-text, one text(text under image + i-number); can paste cross-reference (i-number) picture</br>
