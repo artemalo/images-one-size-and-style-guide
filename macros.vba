@@ -35,14 +35,10 @@ Function GetSizeImage() As Variant
     Do
         isFirstTry = PrintTryAgain(isFirstTry)
         
-        InputHW = InputBox("Enter {height};{width}:", "height;width", height & ";" & width)
-        If InputHW = "" Then
-            InputHW = ";"
-        End If
-        parts = Split(InputHW, ";")
-    Loop Until (Len(InputHW) > 0 And UBound(parts) = 1)
+        InputHW = InputBox("Enter {width}:", "width", width)
+    Loop Until (Len(InputHW) > 0)
 
-    GetSizeImage = Array(Trim(parts(0)), Trim(parts(1)))
+    GetSizeImage = Array(width, width)
 End Function
 ' -----------------------------------------------------------------------------------------------------------------
 ' -----------------------------------------------------------------------------------------------------------------
@@ -145,7 +141,7 @@ Sub Select_Image_scale_text()
         Next shp
         
         If countPic > 0 Then
-            MsgBox "Count pictures: " & countPic & vbCrLf & "height: " & sizeImage(0) & vbCrLf & "width: " & sizeImage(1)
+            MsgBox "Count pictures: " & countPic & vbCrLf & "width: " & sizeImage(1)
         Else
             MsgBox "Pictures were not found"
         End If
