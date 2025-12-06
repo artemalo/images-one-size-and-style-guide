@@ -4,8 +4,8 @@ Public stylePicture As String
 Public stylePictureText As String
 Public textUnderPicture As String
 Sub InitGlobalVars()
-    height = 300
-    width = 300
+    height = 400
+    width = 400
     stylePicture = "Рисунок"
     stylePictureText = "Рисунок текст"
     textUnderPicture = "Рисунок"
@@ -38,7 +38,7 @@ Function GetSizeImage() As Variant
         InputHW = InputBox("Enter {width}:", "width", width)
     Loop Until (Len(InputHW) > 0)
 
-    GetSizeImage = Array(width, width)
+    GetSizeImage = Array(Trim(InputHW), Trim(InputHW))
 End Function
 ' -----------------------------------------------------------------------------------------------------------------
 ' -----------------------------------------------------------------------------------------------------------------
